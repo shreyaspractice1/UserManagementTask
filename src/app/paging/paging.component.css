@@ -1,0 +1,69 @@
+.b {
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trans {
+    transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.vh {
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.rp {
+    padding: 0vh var(--px1) 0vh 0vh;
+}
+
+.lrp {
+    padding: 0vh var(--px1) 0vh var(--px1);
+}
+
+.bg4 {
+    background: var(--white);
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.pt {
+    cursor: pointer;
+}
+
+.bg8 {
+    background: rgb(168, 136, 136);
+}
+
+.brd {
+    border-style: solid;
+    border-color: lightgray;
+}
+
+.fBrd {
+    border-width: 1px;
+}
+
+.bg15 {
+    background: blue;
+}
+
+.sectext {
+    font-size: 12px;
+}
+
+.clr4 {
+    color: var(--white);
+}
+
+.clr2 {
+    color: var(--black);
+}
+
+.mw {
+    font-weight: 400;
+}

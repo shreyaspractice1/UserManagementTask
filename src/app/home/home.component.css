@@ -1,0 +1,32 @@
+td {
+    border: 1px solid rgb(204, 200, 200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+table {
+    width: 80%;
+    margin: 40px auto;
+}
+
+table.list {
+    text-align: center;
+    width: 100%;
+}
+
+th {
+    margin: 50px;
+    padding: 10px;
+}
+
+.addbtn {
+    margin-left: 35%;
+}
+
+.userL {
+    margin-left: 15%;
+}
+
+.main {
+    border-radius: 10%;
+}

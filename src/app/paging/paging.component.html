@@ -1,0 +1,32 @@
+<div style=" display: flex; flex-direction: row; justify-content: center; align-items: center;" class="b trans ">
+  <div style=" display: flex; flex-direction: row; justify-content: center; align-items: center;" class="vh rp"
+    *ngIf="totalPageArr.length && totalPageArr.length >= 1 && totalPageArr[totalPageArr.length - 1].CML_VALUE != 1"
+    [hidden]="selectedPageNumber == 1 || totalPageArr[0].CML_VALUE == 1">
+    <button (click)="prev($event)">prev</button>
+  </div>
+  <div class="vh lrp bg4"
+    style="height: 50px; display: flex; flex-direction: row; justify-content: center; align-items: center;"
+    *ngIf="totalPageArr && totalPageArr.length >=  1 && totalPageArr[totalPageArr.length - 1].CML_VALUE != 1">
+    <div style="height: 20px; display: flex; flex-direction: row; justify-content: center; align-items: center;"
+      class="vh  {{page.CML_VALUE == totalPageArr[totalPageArr.length - 1].CML_VALUE ? '' : 'rp'}}"
+      *ngFor="let page of totalPageArr;let i=index;">
+      <div class="vh circle pt bg8 brd fBrd" [ngClass]="{ bg15:selectedPageNumber == page.CML_VALUE }"
+        (click)="selectPage($event,page);"
+        style="padding: 5px;height:30px;width:30px; display: flex; flex-direction: row; justify-content: center; align-items: center;"
+        layout="row" layout-align="center center">
+        <h5 style="display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;" class="sectext {{selectedPageNumber == page.CML_VALUE ? 'clr4' : 'clr2'}} mw">
+          {{page.CML_VALUE}}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="vh lp "
+    *ngIf="totalPageArr.length && totalPageArr.length >= 1 && totalPageArr[totalPageArr.length - 1].CML_VALUE != 1"
+    [hidden]="selectedPageNumber == totalPages || totalPageArr[totalPageArr.length - 1].CML_VALUE == totalPages"
+    (click)="next($event)" style=" display: flex; flex-direction: row; justify-content: center; align-items: center;">
+    <button (click)="next($event)">next</button>
+  </div>
+</div>

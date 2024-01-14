@@ -1,0 +1,102 @@
+.b {
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trans {
+    transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.vh {
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.rp {
+    padding: 0vh var(--px1) 0vh 0vh;
+}
+
+.lrp {
+    padding: 0vh var(--px1) 0vh var(--px1);
+}
+
+.bg4 {
+    background: var(--white);
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.pt {
+    cursor: pointer;
+}
+
+.bg8 {
+    background: var(--lightgrey);
+}
+
+.brd {
+    border-style: solid;
+    border-color: var(--brdlightgrey);
+}
+
+.fBrd {
+    border-width: 1px;
+}
+
+.bg15 {
+    background: var(--irisPurple);
+}
+
+.sectext {
+    font-size: 12px;
+}
+
+.clr4 {
+    color: var(--white);
+}
+
+.clr2 {
+    color: var(--black);
+}
+
+.mw {
+    font-weight: 400;
+}
+
+.h {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.search {
+    display: inline-block;
+    padding: 1%;
+    margin-left: 25%;
+    /* margin-top: 2%; */
+    border-radius: 7%;
+}
+
+.table {
+    margin-top: 10%;
+}
+
+.addU {
+    /* margin-left: 5%; */
+    float: right;
+}
+
+.container {
+    border: 1px solid rgb(204, 197, 197);
+    margin-top: 5%;
+    border-radius: 3%;
+}
+
+.tr {
+    text-align: center;
+}

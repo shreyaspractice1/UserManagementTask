@@ -1,0 +1,60 @@
+<div class="container col-md-6 mt-5">
+   <div class="main">
+      <div class="row-justify-content-center m-2">
+         <div class="col-md-6 text-left rounded shadow py-12 p-5">
+            <form #empForm="ngForm" (ngSubmit)="userData1(empForm.value)">
+               <div class="form-group">
+                  <input class="form-control" id="userName" type="text" name="userName" [(ngModel)]="empData2.userName"
+                     placeholder="Enter Name" ngModel required maxlength=10>
+
+                  <div style="text-align: center;"
+                     *ngIf="empForm.controls['userName'].invalid && (empForm.controls['userName'].dirty || empForm.controls['userName'].touched)">
+                     <div *ngIf="empForm.controls['userName'].errors['required']" class="text-danger">Name is required.
+                     </div>
+                  </div>
+               </div>
+               <br><br>
+               <div class="form-group">
+                  <input class="form-control" type="email" id="email" name="email"
+                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="empData2.email"
+                     placeholder="Enter Email" ngModel required>
+                  <div style="text-align: center;"
+                     *ngIf="empForm.controls['email'].invalid && (empForm.controls['email'].dirty || empForm.controls['email'].touched)">
+                     <div *ngIf="empForm.controls['email'].errors['required']" class="text-danger">Email is required.
+                     </div>
+                     <div *ngIf="empForm.controls['email'].errors['pattern']" class="text-danger">Enter Valid Email
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+               <br>
+               <div class="form-group">
+                  <span id="title">Select Role</span>
+                  <select name="role" id="role" [(ngModel)]="empData2.role">
+                     <option class="form-control" value="admin"
+                        style="background-color: rgb(225, 220, 220);font-family: sans-serif; font-size: larger;"
+                        aria-required="true">Admin</option>
+                     <option class="form-control" value="user"
+                        style="background-color: rgb(225, 220, 220);font-family: sans-serif; font-size: larger;"
+                        aria-required="true">User</option>
+                  </select>
+
+               </div>
+
+
+               <br><br>
+               <button class="addbtn btn btn-success">Add</button>
+            </form>
+         </div>
+
+      </div>
+      <br><br>
+
+      <div>
+         <button class="userL btn btn-warning" (click)="userListing()">User Listing</button>
+      </div>
+   </div>
+</div>

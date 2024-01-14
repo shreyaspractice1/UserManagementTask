@@ -1,0 +1,55 @@
+<div class="container col-md-6 shadow p-5">
+    <div class="search shadow flex-row justify-content-center border align-items-center"
+        style="width:calc(200px * var(--scaleb));">
+
+        <app-search [parentReq]="'searchUser'" (searchEvent)="searchFuncCall($event)"></app-search>
+    </div>
+    <br>
+
+    <div>
+        <button class="addU btn btn-success" (click)="addUser()">Add User</button>
+    </div>
+
+    <br>
+    <div style="height: 80%;">
+        <td>
+            <table *ngIf="empData.length > 0"
+                class="table table-responsive shadow table-striped table-hover table-condensed table-border"
+                id="storeList">
+                <thead>
+                    <tr class="tr">
+                        <th>Sr No</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email</th>
+                        <!-- <th>Id</th> -->
+                        <!-- <th>Phone No</th> -->
+                        <th scope="col">Role</th>
+                        <th scope="col" style="text-align: center;">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of empData; let index=index">
+                        <td>{{index+1}}</td>
+                        <td>{{data.userName}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.role}}</td>
+                        <!-- <td>{{data.phoneNo}}</td> -->
+                        <!-- <td>{{data.role}}</td> -->
+                        <td><button class="btn btn-dark m-2" (click)="update(data)">Update</button> <button
+                                class="btn btn-danger m-2" (click)="delete(data)">Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </td>
+    </div>
+
+    <div class="h trans d-flex flex-row justify-content-center align-items-center"
+        [style.height]=" pageCount > 1 ? 'height:calc(100% - calc(80px * var(--scaleb)))' : '0px'">
+        <app-paging class="b" [totalPages]="pageCount" [selectedPageNumber]="selectedPageNumber"
+            [displayPerPageCount]="displayCount" (callBackFromPaging)="callBackFunc($event)">
+        </app-paging>
+    </div>
+</div>
